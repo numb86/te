@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": ["flowtype"],
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": 0
+  }
+}

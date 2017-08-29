@@ -8,6 +8,7 @@
     "build": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "flow": "flow"
   },
   "author": "",

@@ -10,7 +10,9 @@
     "prettier"
   ],
   "globals": {
-    "document": true
+    "document": true,
+    "describe": false,
+    "it": false
   },
   "rules": {
     "react/jsx-filename-extension": 0,

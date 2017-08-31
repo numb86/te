@@ -10,13 +10,15 @@
 - Flow
 - ESLint
 - prettier
+- mocha
+- power-assert
+- enzyme
 
 
 ## 入れる予定のもの
 
-- Yarn
-- mocha
-- power-assert
+- ~~Yarn~~ 様子見
+- package-lock.json
 - 環境変数
 - CSS関連
 

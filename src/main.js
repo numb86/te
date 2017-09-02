@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 
 const contents = [
   '今日のうちにブログを書き終えよう。',
@@ -12,9 +12,15 @@ const Header = () => (
   <div>
     <p>Header</p>
     <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/memo">Memo</Link></li>
-      <li><Link to="/profile">Profile</Link></li>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/memo">Memo</Link>
+      </li>
+      <li>
+        <Link to="/profile">Profile</Link>
+      </li>
     </ul>
   </div>
 );
@@ -25,30 +31,24 @@ const Home = () => (
   </div>
 );
 
-const Content = ({ match }) => {
+const Content = ({match}) => {
   const id = Number(match.params.contentId);
   if (!id || id > contents.length) {
-    return (<p>Not Found.</p>);
+    return <p>Not Found.</p>;
   }
-  return (
-    <p>
-      {contents[id - 1]}
-    </p>
-  );
+  return <p>{contents[id - 1]}</p>;
 };
 
-const ContentList = ({ match }) => {
+const ContentList = ({match}) => {
   const list = contents.map((elem, index) => (
-    <li key={index}><Link to={`${match.url}/${index + 1}`}>{index + 1}</Link></li>
+    <li key={index}>
+      <Link to={`${match.url}/${index + 1}`}>{index + 1}</Link>
+    </li>
   ));
-  return (
-    <ul>
-      {list}
-    </ul>
-  );
+  return <ul>{list}</ul>;
 };
 
-const Memo = ({ match }) => (
+const Memo = ({match}) => (
   <div>
     <h2>Memo</h2>
     <Route exact path={`${match.url}/:contentId`} component={Content} />

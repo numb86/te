@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline",
     "build": "webpack -p",
+    "sass": "sass scss:public/css  --style expanded --watch --sourcemap=none",
     "test": "mocha --compilers js:babel-register 'src/**/__tests__/*.test.js'",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",

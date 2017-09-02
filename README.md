@@ -20,7 +20,7 @@
 - ~~Yarn~~ 様子見
 - package-lock.json
 - 環境変数
-- CSS関連
+- ~~CSS関連~~ 取り敢えず、SASSを使うことにした
 
 ## メンテナンス方法
 

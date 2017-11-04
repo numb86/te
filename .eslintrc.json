@@ -17,6 +17,7 @@
   "rules": {
     "react/jsx-filename-extension": 0,
     "react/prop-types": 0,
+    "flowtype/define-flow-type": 1,
     "prettier/prettier": [
       "error",
       {

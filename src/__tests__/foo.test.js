@@ -9,4 +9,7 @@ describe('foo', () => {
     assert(obj.hoge === 1);
     assert(obj.fuga === 1);
   });
+  it('window.location', () => {
+    assert(window.location === 1);
+  });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import assert from 'assert';
 
 import TestTargetComponent from '../TestTargetComponent';
@@ -19,6 +19,11 @@ describe('TestTargetComponent', () => {
     assert(textWrapper.find('Text').length === 1);
     assert(textWrapper.find('Text').find('span').length === 0);
   });
-  it('', () => {});
+  it('mount なら全てのDOMがレンダリングされる', () => {
+    const textWrapper = mount(
+      <TestTargetComponent type="text" textContent="hoge" />
+    );
+    assert(textWrapper.find('Text').find('span').length === 1);
+  });
   it('', () => {});
 });

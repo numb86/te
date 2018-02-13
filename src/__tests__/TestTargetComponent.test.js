@@ -24,6 +24,11 @@ describe('TestTargetComponent', () => {
       <TestTargetComponent type="text" textContent="hoge" />
     );
     assert(textWrapper.find('Text').find('span').length === 1);
+    assert(
+      textWrapper
+        .find('Text')
+        .find('span')
+        .text() === 'hoge'
+    );
   });
-  it('', () => {});
 });

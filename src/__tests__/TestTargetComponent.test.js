@@ -12,7 +12,13 @@ describe('TestTargetComponent', () => {
     assert(listWrapper.find('Text').length === 0);
     assert(listWrapper.find('List').length === 1);
   });
-  it('', () => {});
+  it('shallowでは子コンポーネントは展開されない', () => {
+    const textWrapper = shallow(
+      <TestTargetComponent type="text" textContent="hoge" />
+    );
+    assert(textWrapper.find('Text').length === 1);
+    assert(textWrapper.find('Text').find('span').length === 0);
+  });
   it('', () => {});
   it('', () => {});
 });

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --inline",
-    "build": "NODE_ENV=production webpack -p",
+    "build": "webpack --mode production",
     "sass": "sass scss:public/css  --style expanded --watch --sourcemap=none",
     "test": "mocha --require babel-core/register setup_test.js 'src/**/__tests__/*.test.js'",
     "lint": "eslint src",

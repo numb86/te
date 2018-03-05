@@ -1,6 +1,6 @@
 const path = require('path');
 
-const config = {
+module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: './main.js',
   output: {
@@ -29,5 +29,3 @@ const config = {
     historyApiFallback: true,
   },
 };
-
-module.exports = config;

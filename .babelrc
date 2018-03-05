@@ -10,12 +10,10 @@
   "plugins": ["transform-class-properties"],
   "env": {
     "production": {
-       "plugins": ["transform-react-constant-elements"]
+      "plugins": "transform-react-constant-elements"
     },
     "development": {
-      "presets": [
-        "power-assert"
-      ]
+      "presets": "power-assert"
     }
   }
 }

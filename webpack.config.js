@@ -1,6 +1,6 @@
 const path = require('path');
 
-const config = {
+module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: './main.js',
   output: {
@@ -12,15 +12,7 @@ const config = {
       {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src'),
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['env', 'react'],
-              plugins: ['transform-class-properties'],
-            },
-          },
-        ],
+        use: 'babel-loader',
       },
     ],
   },
@@ -29,5 +21,3 @@ const config = {
     historyApiFallback: true,
   },
 };
-
-module.exports = config;

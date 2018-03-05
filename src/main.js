@@ -65,6 +65,7 @@ const Profile = () => (
 const Root = () => (
   <BrowserRouter>
     <div>
+      <span>{`NODE_ENVは ${process.env.NODE_ENV} です。`}</span>
       <Header />
       <Route exact path="/" component={Home} />
       <Route path="/memo" component={Memo} />
